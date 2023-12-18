@@ -1,1 +1,1 @@
-this directory is for a high level programming
+let start high level programming with python
