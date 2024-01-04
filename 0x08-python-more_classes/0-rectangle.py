@@ -2,5 +2,5 @@
 """Creating a Rectangle class."""
 
 class Rectangle:
-    """Inside rectangle."""
+    """Represent a rectangle."""
     pass
