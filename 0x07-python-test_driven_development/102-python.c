@@ -2,11 +2,11 @@
 
 /**
  * print_python_string - Prints information about Python strings.
- * @p: A PyObject string object.
+ * @p:  pyObject string object.
  */
 void print_python_string(PyObject *p)
 {
-	long int length;
+	long int leng;
 
 	fflush(stdout);
 
@@ -17,12 +17,12 @@ void print_python_string(PyObject *p)
 		return;
 	}
 
-	length = ((PyASCIIObject *)(p))->length;
+	leng = ((PyASCIIObject *)(p))->leng;
 
 	if (PyUnicode_IS_COMPACT_ASCII(p))
 		printf("  type: compact ascii\n");
 	else
 		printf("  type: compact unicode object\n");
-	printf("  length: %ld\n", length);
-	printf("  value: %ls\n", PyUnicode_AsWideCharString(p, &length));
+	printf("  length: %ld\n", leng);
+	printf("  value: %ls\n", PyUnicode_AsWideCharString(p, &leng));
 }
