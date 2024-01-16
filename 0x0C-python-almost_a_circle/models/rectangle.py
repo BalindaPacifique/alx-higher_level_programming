@@ -83,50 +83,40 @@ class Rectangle(Base):
             print("")
 
     def update(self, *args, **kwargs):
-        """Update the Rectangle.
-
-        Args:
-            *args (ints): New attribute values.
-                - 1st argument represents id attribute
-                - 2nd argument represents width attribute
-                - 3rd argument represent height attribute
-                - 4th argument represents x attribute
-                - 5th argument represents y attribute
-            **kwargs (dict): New key/value pairs of attributes.
-        """
+        """Updated Rectangle."""
         if args and len(args) != 0:
-            a = 0
+            b = 0
             for arg in args:
-                if a == 0:
+                if b == 0:
                     if arg is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = arg
-                elif a == 1:
+                elif b == 1:
                     self.width = arg
-                elif a == 2:
+                elif b == 2:
                     self.height = arg
-                elif a == 3:
+                elif b == 3:
                     self.x = arg
-                elif a == 4:
+                elif b == 4:
                     self.y = arg
-                a += 1
+                b += 1
 
         elif kwargs and len(kwargs) != 0:
-            for k, v in kwargs.items():
-                if k == "id":
-                    if v is None:
+            for i, j in kwargs.items():
+                if i == "id":
+                    if j is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
-                        self.id = v
-                elif k == "width":
-                    self.width = v
-                elif k == "height":
-                    self.height = v
-                elif k == "x":
-                    self.x = v
-                elif k == "y":
-                    self.y = v
+                        self.id = j
+                elif i == "width":
+                    self.width = j
+                elif i == "height":
+                    self.height = j
+                elif i == "x":
+                    self.x = j
+                elif i == "y":
+                    self.y = j
 
     def to_dictionary(self):
         """Return the dictionary representation of a Rectangle."""
