@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#this file runs a file which is stored in $PYCODE file
+
+python3 -c "$PYCODE"
