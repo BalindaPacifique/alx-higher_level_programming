@@ -1,0 +1,3 @@
+#!/bin/bash
+#0-run run the pythons file which is stored in PYFILE
+python3 "PYFILE"
